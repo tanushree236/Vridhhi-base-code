@@ -4,6 +4,7 @@ import 'package:vriddhi_base_code/ContactUs.dart';
 import 'package:vriddhi_base_code/Decoratives.dart';
 
 import 'FoodAndBeverages.dart';
+import 'Others.dart';
 import 'dashboard.dart';
 import 'my_drawer_header.dart';
 import 'Jwellery.dart';
@@ -43,6 +44,8 @@ class _HomePageState extends State<HomePage> {
       container = decoratives();
     } else if (currentPage == DrawerSections.Jwellery) {
       container = Jwellery();
+    } else if (currentPage == DrawerSections.others) {
+      container = others();
     } else if (currentPage == DrawerSections.contacts) {
       container = contactUs();
     } else if (currentPage == DrawerSections.wishlist) {
@@ -126,15 +129,17 @@ class _HomePageState extends State<HomePage> {
               currentPage == DrawerSections.Decoratives ? true : false),
           menuItem(4, "Jwellery", Icons.notes,
               currentPage == DrawerSections.Jwellery ? true : false),
+          menuItem(5, "Others", Icons.notes,
+              currentPage == DrawerSections.Jwellery ? true : false),
           Divider(),
-          menuItem(5, "Contact Us", Icons.settings_outlined,
+          menuItem(6, "Contact Us", Icons.settings_outlined,
               currentPage == DrawerSections.settings ? true : false),
-          menuItem(6, "Wishlist", Icons.heat_pump_rounded,
+          menuItem(7, "Wishlist", Icons.heat_pump_rounded,
               currentPage == DrawerSections.wishlist ? true : false),
           Divider(),
-          menuItem(7, "Settings", Icons.privacy_tip_outlined,
+          menuItem(8, "Settings", Icons.privacy_tip_outlined,
               currentPage == DrawerSections.settings ? true : false),
-          menuItem(8, "Privacy Policy", Icons.feedback_outlined,
+          menuItem(9, "Privacy Policy", Icons.feedback_outlined,
               currentPage == DrawerSections.privacy_policy ? true : false),
         ],
       ),
@@ -157,12 +162,14 @@ class _HomePageState extends State<HomePage> {
             } else if (id == 4) {
               currentPage = DrawerSections.Jwellery;
             } else if (id == 5) {
-              currentPage = DrawerSections.contacts;
+              currentPage = DrawerSections.Jwellery;
             } else if (id == 6) {
-              currentPage = DrawerSections.wishlist;
+              currentPage = DrawerSections.contacts;
             } else if (id == 7) {
-              currentPage = DrawerSections.settings;
+              currentPage = DrawerSections.wishlist;
             } else if (id == 8) {
+              currentPage = DrawerSections.settings;
+            } else if (id == 9) {
               currentPage = DrawerSections.privacy_policy;
             }
           });
@@ -205,4 +212,5 @@ enum DrawerSections {
   FoodAndBeverages,
   Jwellery,
   wishlist,
+  others,
 }

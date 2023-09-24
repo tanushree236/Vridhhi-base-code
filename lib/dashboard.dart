@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:vriddhi_base_code/Decoratives.dart';
 import 'package:vriddhi_base_code/FoodAndBeverages.dart';
 import 'package:vriddhi_base_code/GridViewdb.dart';
+import 'package:vriddhi_base_code/Jwellery.dart';
+import 'package:vriddhi_base_code/Others.dart';
 
 class DashboardPage extends StatefulWidget {
   @override
@@ -137,14 +139,17 @@ class _DashboardPageState extends State<DashboardPage> {
                     'assets/images/fnb.png',
                     'Jewellery',
                     () {
-                      // Add your logic here for when the image is tapped.
+                      Navigator.of(context).push(
+                          MaterialPageRoute(builder: (context) => Jwellery()));
                     },
                   ),
                   buildImageWithText(
                     'assets/images/fnb.png',
                     'Others',
                     () {
-                      // Add your logic here for when the image is tapped.
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) =>
+                              others())); // Add your logic here for when the image is tapped.
                     },
                   ),
                 ],

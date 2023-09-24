@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 import 'GridViewdb.dart';
 
-class decoratives extends StatefulWidget {
-  const decoratives({super.key});
+class others extends StatefulWidget {
+  const others({super.key});
 
   @override
-  State<decoratives> createState() => _decorativesState();
+  State<others> createState() => _othersState();
 }
 
-class _decorativesState extends State<decoratives> {
+class _othersState extends State<others> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
